@@ -131,14 +131,14 @@ ${ROOT}
         │   ├── image_2/ (left color camera)
         │   ├── calib/
         │   ├── label_2/
-        │	  ├── lidar2/
-        │	  ├── bin2/
+        │├── lidar2/
+        │├── bin2/
         │   └── velodyne/
         └── testing/  
         │   ├── image_2/ (left color camera)
         │   ├── calib/
-        │   ├── lidar2/
-        │	  ├── bin2/
+        │├── lidar2/
+        │├── bin2/
         │   └── velodyne/
         │
         └── classes_names.txt
