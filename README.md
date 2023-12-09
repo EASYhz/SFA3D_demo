@@ -67,36 +67,36 @@ $ python demo_2_sides.py --gpu_idx 0 --peak_thresh 0.1
 
 ##### 3.4.1. Single machine, single gpu
 
-```shell script
-python train.py --gpu_idx 0
+```bash
+$ python train.py --gpu_idx 0
 ```
 
 ##### 3.4.2. Distributed Data Parallel Training
 - **Single machine (node), multiple GPUs**
 
-```
-python train.py --multiprocessing-distributed --world-size 1 --rank 0 --batch_size 64 --num_workers 8
+```bash
+$ python train.py --multiprocessing-distributed --world-size 1 --rank 0 --batch_size 64 --num_workers 8
 ```
 
 - **Two machines (two nodes), multiple GPUs**
 
    - _**First machine**_
-    ```
-    python train.py --dist-url 'tcp://IP_OF_NODE1:FREEPORT' --multiprocessing-distributed --world-size 2 --rank 0 --batch_size 64 --num_workers 8
+    ```bash
+    $ python train.py --dist-url 'tcp://IP_OF_NODE1:FREEPORT' --multiprocessing-distributed --world-size 2 --rank 0 --batch_size 64 --num_workers 8
     ```
 
    - _**Second machine**_
-    ```
-    python train.py --dist-url 'tcp://IP_OF_NODE2:FREEPORT' --multiprocessing-distributed --world-size 2 --rank 1 --batch_size 64 --num_workers 8
+    ```bash
+    $ python train.py --dist-url 'tcp://IP_OF_NODE2:FREEPORT' --multiprocessing-distributed --world-size 2 --rank 1 --batch_size 64 --num_workers 8
     ```
 
 #### Tensorboard
 
 - To track the training progress, go to the `logs/` folder and 
 
-```shell script
-cd logs/<saved_fn>/tensorboard/
-tensorboard --logdir=./
+```bash
+$ cd logs/<saved_fn>/tensorboard/
+$ tensorboard --logdir=./
 ```
 
 ## References
